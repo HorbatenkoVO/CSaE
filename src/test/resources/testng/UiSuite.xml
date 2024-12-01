@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Прохождение ui-тестов всех приложений." parallel="methods" thread-count="1">
+    <test name="Прохождение ui-тестов всех приложений." preserve-order="false" parallel="methods" thread-count="1">
+        <groups>
+            <run>
+                <include name="ui"/>
+                <exclude name="needUpdating"/>
+            </run>
+        </groups>
+
+        <packages>
+            <package name="tests.ui.payApp.purchase"/>
+            <package name="tests.ui.payApp.cancellation"/>
+            <package name="tests.ui.payApp.generalReport"/>
+            <package name="tests.ui.payApp.purchaseWithCashingUp"/>
+            <package name="tests.ui.payApp.tips"/>
+            <package name="tests.ui.payApp.xBalance"/>
+            <package name="tests.ui.payApp.receiptCopy"/>
+        </packages>
+    </test>
+
+</suite>

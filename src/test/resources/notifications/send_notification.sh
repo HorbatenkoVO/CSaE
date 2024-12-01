@@ -1,0 +1,1 @@
+java "-DconfigFile=target/notifications/config.json" -jar src/test/resources/notifications/allure-notifications-4.5.0.jar

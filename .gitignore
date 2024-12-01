@@ -1,0 +1,12 @@
+.allure/
+.idea/
+build/
+target/
+allure-results/
+allure-report/
+
+qa.properties
+secret.properties
+*.log
+/*.log
+*.iml

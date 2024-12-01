@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Проигнорированные тесты",
+    "matchedStatuses": ["skipped"]
+  },
+  {
+    "name": "Не пройденные тесты",
+    "matchedStatuses": ["failed"]
+  },
+  {
+    "name": "Сломанные тесты",
+    "matchedStatuses": ["broken"]
+  },
+  {
+    "name": "Успешные тесты",
+    "matchedStatuses": ["passed"]
+  },
+  {
+    "name": "Інфраструктурна проблема. Впав Appium",
+    "matchedStatuses": ["failed"],
+    "traceRegex": [".*NoSuchSessionException.*"]
+  }
+]

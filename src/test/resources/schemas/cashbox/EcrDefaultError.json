@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "required": [
+    "action",
+    "phase",
+    "arguments",
+    "failure",
+    "failureDetails"
+  ],
+  "properties": {
+    "action": {
+      "type": "string"
+    },
+    "phase": {
+      "type": "number",
+      "pattern": 0
+    },
+    "arguments": {
+      "type": "object",
+      "required": [
+        "statusCode"
+      ],
+      "properties": {
+        "statusCode": {
+          "type": "string",
+          "pattern": "^\\d{1,4}$"
+        }
+      }
+    },
+    "failure": {
+      "type": "boolean",
+      "pattern": true
+    },
+    "failureDetails": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

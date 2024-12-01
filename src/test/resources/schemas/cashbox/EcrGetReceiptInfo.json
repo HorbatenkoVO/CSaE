@@ -1,0 +1,117 @@
+{
+  "type": "object",
+  "required": [
+    "action",
+    "phase",
+    "arguments",
+    "failure",
+    "failureDetails"
+  ],
+  "properties": {
+    "action": {
+      "type": "string",
+      "pattern": "GetReceiptInfo"
+    },
+    "phase": {
+      "type": "number",
+      "pattern": 0
+    },
+    "arguments": {
+      "type": "object",
+      "required": [
+        "authorizationCode",
+        "retrievalReferenceNumber",
+        "transactionAmount",
+        "billNumber",
+        "transactionTime",
+        "acquiringBank",
+        "statusCode",
+        "cardIssuer",
+        "storeName",
+        "transactionDate",
+        "cardNumber",
+        "cardNetwork"
+      ],
+      "properties": {
+        "authorizationCode": {
+          "type": "string",
+          "pattern": "^\\d{0,10}$"
+        },
+        "billNumber": {
+          "type": "string",
+          "pattern": "^\\d{1,10}$"
+        },
+        "cardIssuer": {
+          "type": "string"
+        },
+        "acquiringBank": {
+          "type": "string"
+        },
+        "retrievalReferenceNumber": {
+          "type": "string",
+          "pattern": "^\\d{0,20}$"
+        },
+        "signVerif": {
+          "type": "string",
+          "enum": [
+            "0"
+          ]
+        },
+        "statusCode": {
+          "type": "string",
+          "enum": [
+            "0000"
+          ]
+        },
+        "txnType": {
+          "type": "string",
+          "enum": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        "transactionAmount": {
+          "type": "string",
+          "pattern": "\\d{1,8}.\\d{2}"
+        },
+        "storeName": {
+          "type": "string"
+        },
+        "transactionDate": {
+          "type": "string",
+          "pattern": "\\d{2}.\\d{2}.\\d{4}"
+        },
+        "transactionTime": {
+          "type": "string",
+          "pattern": "\\d{2}:\\d{2}:\\d{2}"
+        },
+        "cardNumber": {
+          "type": "string",
+          "pattern": "\\d{8}[*]{6}\\d{2}|\\d{6}[*]{6}\\d{4}|\\d{4}[*]{8}\\d{4}|\\d{9}[*]{6}\\d{1}|\\d{6}[*]{8}\\d{2}"
+        },
+        "cardNetwork": {
+          "type": "string",
+          "enum": [
+            "VISA",
+            "MASTERCARD",
+            "PROSTIR",
+            ""
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "failure": {
+      "type": "boolean",
+      "pattern": false
+    },
+    "failureDetails": {
+      "type": "string",
+      "pattern": ""
+    }
+  },
+  "additionalProperties": true
+}

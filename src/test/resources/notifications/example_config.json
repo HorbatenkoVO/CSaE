@@ -1,0 +1,14 @@
+{
+  "base": {
+    "project": "${JOB_BASE_NAME}",
+    "environment": "${BRANCH}-${TESTNG_SUITE}",
+    "comment": "Сервисы настроек пос-терминалов",
+    "reportLink": "${BUILD_URL}",
+    "language": "ua",
+    "allureFolder": "allure-report/",
+    "enableChart": false
+  },
+  "loop": {
+    "webhookUrl": "https://chat.googleapis.com/v1/spaces/AAAAT7LMQtY/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=zB4EP5Z-rXqIAWVqN1nA7ssgal1a9vu1UqqWwOuoMbU"
+  }
+}
